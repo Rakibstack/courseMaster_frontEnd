@@ -41,8 +41,8 @@ export default function App() {
           {/* public */}
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/:id" element={<CourseDetails />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
           <Route path="/register" element={<Register />} />
 
           {/* student dashboard (protected) */}

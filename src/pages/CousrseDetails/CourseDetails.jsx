@@ -16,7 +16,8 @@ export default function CourseDetails() {
     const { currentCourse, detailLoading, error: courseError } = useSelector((state) => state.courses);
     const { enrolling, error: enrollError, success, enrollments: myEnrollments } = useSelector((state) => state.enrollment);
     const { user, token, isAuthenticated } = useSelector((state) => state.auth);
-    const [selectedBatchId, setSelectedBatchId] = useState(null);
+    const [selectedBatchId, setSelectedBatchId] = useState(null);    
+    
 
     useEffect(() => {
         dispatch(fetchCourseById(id));

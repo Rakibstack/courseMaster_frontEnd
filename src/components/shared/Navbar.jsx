@@ -8,7 +8,8 @@ import { getMe } from "../../services/auth.api";
 export default function Navbar() {
     const navigate = useNavigate();
     const token = getToken();
-    const [me, setMe] = useState(null);
+    
+    const [me, setMe] = useState(null);        
 
     const navLinkClass = ({ isActive, to }) =>
         (isActive || window.location.pathname.startsWith("/"))
@@ -18,7 +19,7 @@ export default function Navbar() {
     const handleLogout = () => {
         clearToken();
         setMe(null);
-        navigate("/");
+        navigate("/login");
         window.location.reload();
     };
 
